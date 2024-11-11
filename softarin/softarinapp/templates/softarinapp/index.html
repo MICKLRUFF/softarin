@@ -1,0 +1,264 @@
+{% extends 'softarinapp/base.html' %}
+
+{% load static %}
+{% load i18n %}
+{% block content%}
+    <main>
+        <div class="video-background">
+            <h1>{% trans 'Customized and stable IT solutions with AI' %}</h1>
+            <h2>{% blocktrans %}Developing AI Chatbots, Mobile & Web Apps & World Class Software for Startups, SMBs & Enterprises{% endblocktrans %}</h2>
+            <a href="#contactus" style="text-decoration: none;"><button class="request_button2" href="#contactus">{% trans 'Contact Us' %}</button></a>
+
+        </div>
+        {% if servicess %}
+        <div class="body-content_2" id="services">
+            <div class="title_type1">
+                <h1>{% trans 'Our Services' %}</h1>
+            </div>
+
+            {% for s in servicess %}
+            
+            {% if forloop.counter0|divisibleby:3 %}
+                {% if not forloop.first %}</div>{% endif %}
+                <div class="body-content">
+            {% endif %}
+            
+            <div class="news_gallery">
+                <img class="projects_foto"src="{{ s.image.url }}" alt="{{ s.name }}">
+                <a href="#" class="link">{{ s.name }}</a>
+            <p>{{ s.description }}</p>
+            </div>
+                </div>
+            
+        {% endfor %}
+        {% if not forloop.counter0|divisibleby:3 %}</div>{% endif %}
+        {% endif %}
+        
+        {% if whom %}
+        <div class="body-content_2" id="whom">
+            <div class="title_type1">
+                <h1>{% trans 'For Whom?' %}</h1>
+                <p>{% trans 'We work with everyone, but are most focused on cooperation with:' %}</p>
+            </div>
+            <div class="controls" >
+                <img src="{% static 'softarinapp/images/left.png' %}" alt="Left" id="LeftBotton" class="LeftBotton">
+                <div class="container_gallery" style="max-width: 1220px">
+                    {% for p in whom %}
+                    <div class="gallery" id="gallery">
+                        <div class="proposition2">
+                            <div class="title_type1">
+                                <img src="{{ p.image.url }}" style=" border-radius: 50px; width: 100px; height: 100px;">
+                                <h2>{{ p.name }}</h2>
+                            </div>
+                            <div class="text_block_2">
+                                <p>{{ p.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+                <img src="{% static 'softarinapp/images/right.png' %}" alt="Right" id="RightBotton" class="RightBotton">
+            </div>
+            
+        </div>
+        {% endif %}
+
+        {% if stages %}
+        <div class="body-content_2" id="stages">
+            <div class="title_type1">
+                <h1>{% trans 'Stages of work' %}</h1>
+            </div>
+
+            {% for s in stages %}
+            
+            {% if forloop.counter0|divisibleby:3 %}
+                {% if not forloop.first %}</div>{% endif %}
+                <div class="body-content">
+            {% endif %}
+            
+            <div class="news_gallery">
+                <img class="projects_foto"src="{{ s.image.url }}" alt="{{ s.name }}">
+                <a href="#" class="link">{{ s.name }}</a>
+            <p>{{ s.description }}</p>
+            </div>
+                </div>
+            
+        {% endfor %}
+        {% if not forloop.counter0|divisibleby:3 %}</div>{% endif %}
+        {% endif %}
+
+        <div class="body-content_2" id="about">
+            <div class="title_type1">
+                <h1 class="h1_title">{% trans 'About US' %}</h1>
+            </div>
+            <div class="body-content">
+               
+                    <div class="text_block">
+                        <p style="margin-top: -80px; margin-bottom: -80px;">{% blocktrans %}Our company is a reliable software vendor that successfully enters the European Union market and is actively developing its presence in Spain. We specialize in creating complex digital solutions that help businesses increase efficiency, reduce costs and improve interactions with customers. Our development approach is based on the principles of high versatility, innovation and adaptability to current technological trends.
+
+The team consists of qualified engineers, designers, analysts and project managers who have extensive knowledge of various programming fields and have significant knowledge in the development of corporate mobile applications, solution, web platforms and dark systems. We are introducing a new cycle of software development, which includes analysis of client needs, design, development, testing and support, with an emphasis on the individual benefits of the skin care provider.
+
+However, we can apply the adaptive approach to a variety of businesses - from small startups to large corporations, introducing solutions that are consistent with their goals and budget. Our projects are characterized by a high level of security, scale and integration with other systems. In addition, we promote advanced technologies, such as artificial intelligence, machine learning, data analysis and business process automation, to provide our clients with a competitive advantage in the market.
+
+In our work with clients, we pay special respect to long-term cooperation and ongoing partnerships, understanding that the success of our clients is our success. With this approach, we help businesses integrate new technologies into their activities and constantly leap forward in the digital era, perhaps to the current market.{% endblocktrans %}</p>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        {% if feedback %}
+        <div class="body-content_2" id="whom">
+            <div class="title_type1">
+                <h1>{% trans 'Our Clients Feedbacks' %}</h1>
+            </div>
+            <div class="controls" >
+                <img src="{% static 'softarinapp/images/left.png' %}" alt="Left" id="LeftBotton" class="LeftBotton">
+                <div class="container_gallery" style="max-width: 1220px">
+                    {% for p in whom %}
+                    <div class="gallery" id="gallery">
+                        <div class="proposition2">
+                            <div class="title_type1">
+                                <img src="{{ p.image.url }}" style=" border-radius: 50px; width: 100px; height: 100px;">
+                                <h2>{{ p.name }}</h2>
+                            </div>
+                            <div class="text_block_2">
+                                <p>{{ p.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+                <img src="{% static 'softarinapp/images/right.png' %}" alt="Right" id="RightBotton" class="RightBotton">
+            </div>
+            
+        </div>
+        {% endif %}
+        <script>
+            // Вибираємо всі галереї
+            let galleries = document.querySelectorAll('.controls');
+        
+            // Для кожної галереї застосовуємо свій функціонал
+            galleries.forEach((gallery) => {
+                let horizontScroll = gallery.querySelector('.container_gallery');
+                let leftBtn = gallery.querySelector('.LeftBotton');
+                let rightBtn = gallery.querySelector('.RightBotton');
+                let scrollAmount;
+                let autoScroll; // Змінна для зберігання інтервалу
+        
+                // Функція для встановлення кількості пікселів для прокручування залежно від ширини екрану
+                function updateScrollAmount() {
+                    const screenWidth = window.innerWidth;
+        
+                    if (screenWidth <= 600) {
+                        scrollAmount = 362; // Мала ширина екрану (наприклад, мобільний)
+                    } else if (screenWidth <= 1024) {
+                        scrollAmount = 380; // Середня ширина екрану (наприклад, планшет)
+                    } else {
+                        scrollAmount = 410; // Велика ширина екрану (наприклад, десктоп)
+                    }
+                }
+        
+                // Викликаємо функцію для встановлення початкового значення
+                updateScrollAmount();
+        
+                // Додаємо обробник події для зміни розміру вікна
+                window.addEventListener('resize', updateScrollAmount);
+        
+                // Функція для запуску автоматичного прокручування
+                function startAutoScroll() {
+                    autoScroll = setInterval(() => {
+                        // Якщо досягнуто кінця контейнера, повертаємося на початок
+                        if (horizontScroll.scrollLeft + horizontScroll.clientWidth >= horizontScroll.scrollWidth) {
+                            horizontScroll.scrollTo({
+                                left: 0, // Початок галереї
+                                behavior: 'smooth'
+                            });
+                        } else {
+                            horizontScroll.scrollBy({
+                                left: scrollAmount,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 3000); // Прокручування кожні 3 секунди
+                }
+        
+                // Функція для зупинки автоматичного прокручування
+                function stopAutoScroll() {
+                    clearInterval(autoScroll); // Зупинка інтервалу
+                }
+        
+                // Запуск автоматичного прокручування для кожної галереї
+                startAutoScroll();
+        
+                // Кнопки для прокручування вручну
+                rightBtn.addEventListener('click', () => {
+                    horizontScroll.scrollBy({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                });
+        
+                leftBtn.addEventListener('click', () => {
+                    horizontScroll.scrollBy({
+                        left: -scrollAmount,
+                        behavior: 'smooth'
+                    });
+                });
+        
+                // Зупинка прокручування при наведенні миші на галерею
+                horizontScroll.addEventListener('mouseenter', stopAutoScroll);
+        
+                // Відновлення прокручування після того, як миша покине область галереї
+                horizontScroll.addEventListener('mouseleave', startAutoScroll);
+            });
+        </script>
+        
+        <div class="body-content_2" id="contactus">
+            <div class="title_type1">
+                <h1>{% trans 'Contact Form' %}</h1>
+                <p>{% trans 'Leave your contact information so that we can contact you as soon as possible' %}</p>
+            </div>
+
+            <form class="feed-back_form" action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+
+                {% for f in form %}
+                <span class="feed-back-feld" data-name="your-name">
+                    {{ f }}
+                </span>
+                {% endfor %}
+
+                <button class="request_button" type="submit">{% trans 'Send Request' %}</button>
+            </form>
+        </div>
+
+        <!-- <div class="body-content_2" id="contactus">
+            <div class="title_type1">
+                <h1>Contact Form</h1>
+            </div>
+            <div class="feed-back_form">
+
+                <label>YOUR NAME</label>
+                <span class="feed-back-feld" data-name="your-name"><input size="40" class="feed-back-feld_in"
+                        autocomplete="name" aria-required="true" aria-invalid="false" value="" type="text"
+                        name="your-name"></span>
+                <label>YOUR PHONE</label>
+                <span class="feed-back-feld" data-name="your-name"><input size="40" class="feed-back-feld_in"
+                        autocomplete="name" aria-required="true" aria-invalid="false" value="" type="text"
+                        name="your-name"></span>
+                <label>YOUR EMAIL</label>
+                <span class="feed-back-feld" data-name="your-name"><input size="40" class="feed-back-feld_in"
+                        autocomplete="name" aria-required="true" aria-invalid="false" value="" type="text"
+                        name="your-name"></span>
+                <button class="request_button">Send Request</button>
+            </div>
+        </div> -->
+
+
+    </main>
+{% endblock content%}

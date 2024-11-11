@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-11 06:51+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: softarin/settings.py:125
+msgid "English"
+msgstr "English"
+
+#: softarin/settings.py:126
+msgid "Ukrainian"
+msgstr "Українська"
+
+#: softarin/settings.py:127
+msgid "Spanish"
+msgstr "Español"
+
+#: softarinapp/forms.py:20
+msgid "NAME"
+msgstr "NOMBRE"
+
+#: softarinapp/forms.py:28
+msgid "PHONE"
+msgstr "TELÉFONO"
+
+#: softarinapp/forms.py:36
+msgid "E-MAIL"
+msgstr "CORREO ELECTRÓNICO"
+
+#: softarinapp/templates/softarinapp/index.html:8
+msgid "Customized and stable IT solutions with AI"
+msgstr "Soluciones informáticas personalizadas y estables con IA"
+
+#: softarinapp/templates/softarinapp/index.html:9
+msgid ""
+"Developing AI Chatbots, Mobile & Web Apps & World Class Software for "
+"Startups, SMBs & Enterprises"
+msgstr ""
+"Desarrollo de Chatbots habilitados para IA, aplicaciones móviles y web y software de clase mundial para "
+"startups, medianas y pequeñas empresas y empresas."
+
+#: softarinapp/templates/softarinapp/index.html:10
+msgid "Contact Us"
+msgstr "Сontactos"
+
+#: softarinapp/templates/softarinapp/index.html:16 softarinapp/views.py:12
+msgid "Our Services"
+msgstr "Nuestros servicios"
+
+#: softarinapp/templates/softarinapp/index.html:40
+msgid "For Whom?"
+msgstr "¿Para quién?"
+
+#: softarinapp/templates/softarinapp/index.html:41
+msgid "We work with everyone, but are most focused on cooperation with:"
+msgstr "Todavía trabajo con todos, pero estamos más enfocados en la operación con:"
+
+#: softarinapp/templates/softarinapp/index.html:71 softarinapp/views.py:14
+msgid "Stages of work"
+msgstr "Etapas del trabajo"
+
+#: softarinapp/templates/softarinapp/index.html:94
+msgid "About US"
+msgstr "Sobre nosotros"
+
+#: softarinapp/templates/softarinapp/index.html:99
+msgid ""
+"Our company is a reliable software vendor that successfully enters the "
+"European Union market and is actively developing its presence in Spain. We "
+"specialize in creating complex digital solutions that help businesses "
+"increase efficiency, reduce costs and improve interactions with customers. "
+"Our development approach is based on the principles of high versatility, "
+"innovation and adaptability to current technological trends.\n"
+"\n"
+"The team consists of qualified engineers, designers, analysts and project "
+"managers who have extensive knowledge of various programming fields and have "
+"significant knowledge in the development of corporate mobile applications, "
+"solution, web platforms and dark systems. We are introducing a new cycle of "
+"software development, which includes analysis of client needs, design, "
+"development, testing and support, with an emphasis on the individual "
+"benefits of the skin care provider.\n"
+"\n"
+"However, we can apply the adaptive approach to a variety of businesses - "
+"from small startups to large corporations, introducing solutions that are "
+"consistent with their goals and budget. Our projects are characterized by a "
+"high level of security, scale and integration with other systems. In "
+"addition, we promote advanced technologies, such as artificial intelligence, "
+"machine learning, data analysis and business process automation, to provide "
+"our clients with a competitive advantage in the market.\n"
+"\n"
+"In our work with clients, we pay special respect to long-term cooperation "
+"and ongoing partnerships, understanding that the success of our clients is "
+"our success. With this approach, we help businesses integrate new "
+"technologies into their activities and constantly leap forward in the "
+"digital era, perhaps to the current market."
+msgstr ""
+"Nuestra empresa es un proveedor de software confiable que ingresa con éxito al mercado"
+"El mercado de la Unión Europea está en constante desarrollo y presencia en España. "
+"Nos especializamos en crear soluciones digitales complejas que ayuden a las empresas"
+"aumentar la eficiencia, reducir costos y mejorar las interacciones con los clientes."
+"Nuestro enfoque de desarrollo se basa en los principios de alta versatilidad,"
+"innovación y adaptabilidad a las tendencias tecnológicas actuales."
+"\n"
+"El equipo está formado por ingenieros, diseñadores, analistas y profesionales del proyecto cualificados"
+"gerentes que tengan amplios conocimientos en diversos campos de programación y tengan"
+"conocimiento significativo en el desarrollo de aplicaciones móviles corporativas,"
+"solución, plataformas web y sistemas oscuros. Presentamos un nuevo ciclo de"
+"desarrollo de software, que incluye análisis de las necesidades del cliente, diseño, "
+"desarrollo, pruebas y soporte, con énfasis en el individuo "
+"beneficios del proveedor de cuidado de la piel.\n"
+"\n"
+"Sin embargo, podemos aplicar el enfoque adaptativo a una variedad de negocios:"
+"desde pequeñas empresas emergentes hasta grandes corporaciones, introduciendo soluciones que son "
+"acorde a sus objetivos y presupuesto. Nuestros proyectos se caracterizan por un"
+"Alto nivel de seguridad, escalabilidad e integración con otros sistemas."
+"Además, promovemos tecnologías avanzadas, como la inteligencia artificial,"
+"aprendizaje automático, análisis de datos y automatización de procesos de negocio, para proporcionar"
+"Nuestros clientes con una ventaja competitiva en el mercado.\n"
+"\n"
+"En nuestro trabajo con los clientes, prestamos especial atención a la cooperación a largo plazo. "
+"y alianzas continuas, entendiendo que el éxito de nuestros clientes es "
+"nuestro éxito. Con este enfoque, ayudamos a las empresas a integrar nuevos "
+"tecnologías en sus actividades y avanzar constantemente en el"
+"era digital, tal vez al mercado actual."
+
+
+#: softarinapp/templates/softarinapp/index.html:115
+msgid "Our Clients Feedbacks"
+msgstr "Comentarios de nuestros clientes"
+
+#: softarinapp/templates/softarinapp/index.html:223
+msgid "Contact Form"
+msgstr "Formulario de contacto"
+
+#: softarinapp/templates/softarinapp/index.html:224
+msgid ""
+"Leave your contact information so that we can contact you as soon as possible"
+msgstr ""
+"Déjanos tus datos de contacto para que podamos comunicarnos contigo lo antes posible"
+
+#: softarinapp/templates/softarinapp/index.html:236
+msgid "Send Request"
+msgstr ""
+
+#: softarinapp/views.py:13
+msgid "For whom?"
+msgstr "¿Para quién?"
+
+#: softarinapp/views.py:15
+msgid "About Us"
+msgstr "Sobre nosotros"
+
+#: softarinapp/views.py:16
+msgid "Contact"
+msgstr "Contactos"

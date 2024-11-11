@@ -1,0 +1,145 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftArin | {{title}}</title>
+    <link rel="stylesheet" href="{% static 'softarinapp/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    {% block mainmenu %}
+    <!----HEADER---->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <form action="{% url 'set_language' %}" method="post" class="language-form">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language" onchange="this.form.submit();" class="language-form-option">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            {% if language.code in 'en uk es' %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                    {% if language.code == 'uk' %}
+                                        ua
+                                    {% else %}
+                                        {{ language.code }}
+                                    {% endif %}
+                                </option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </form> 
+                <div class="logo_and_lg">
+                    <a href="#"><img class="header-content__logo" src="{% static 'softarinapp/images/logo2.svg' %}" alt=""></a>
+         
+                </div>
+
+                <nav class="nav_left">
+                    {% for m in menu %}
+                    <a href="#{{ m.pageid }}" class="link">{{ m.title }}</a>
+                    {% endfor %}
+                </nav>
+                
+                <div class="header-content__last">
+                    <a href="https://www.instagram.com/voltreform.s.l/">
+                        <img src="{% static 'softarinapp/images/Instagram_logo.png' %}" class="header-content__logo" alt="" >
+                    </a>
+                </div>
+                <div class="mobile-menu-button" id="mobileMenuButton">
+                    <span id="hamburgerIcon" class="icon">&#9776;</span>
+                    <span id="crossIcon" class="icon" >&#10006;</span> <!-- Cross icon -->
+                </div>
+            </div>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav">
+            {% for m in menu %}
+            <a href="#{{ m.pageid }}" class="link">{{ m.title }}</a>
+            {% endfor %}
+            <a href="#" class="link">Instagram</a>
+        </nav>
+    </header>
+    <script>
+        document.getElementById("mobileMenuButton").addEventListener("click", function(event) {
+            var mobileNav = document.getElementById("mobileNav");
+            var hamburgerIcon = document.getElementById("hamburgerIcon");
+            var crossIcon = document.getElementById("crossIcon");
+    
+            // Toggle the mobile navigation visibility
+            if (mobileNav.style.display === "flex") {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+    
+            // Prevent event propagation to avoid immediate close when clicking the button
+            event.stopPropagation();
+        });
+    
+        // Function to open the menu
+        function openMenu() {
+            var mobileNav = document.getElementById("mobileNav");
+            var hamburgerIcon = document.getElementById("hamburgerIcon");
+            var crossIcon = document.getElementById("crossIcon");
+    
+            mobileNav.style.display = "flex";
+            hamburgerIcon.classList.add('hide');
+            crossIcon.classList.add('show');
+        }
+    
+        // Function to close the menu
+        function closeMenu() {
+            var mobileNav = document.getElementById("mobileNav");
+            var hamburgerIcon = document.getElementById("hamburgerIcon");
+            var crossIcon = document.getElementById("crossIcon");
+    
+            mobileNav.style.display = "none";
+            hamburgerIcon.classList.remove('hide');
+            crossIcon.classList.remove('show');
+        }
+    
+        // Event listener for clicks outside the menu
+        document.addEventListener("click", function(event) {
+            var mobileNav = document.getElementById("mobileNav");
+            var mobileMenuButton = document.getElementById("mobileMenuButton");
+    
+            // Check if the click happened outside of the menu and the button
+            if (mobileNav.style.display === "flex" && !mobileMenuButton.contains(event.target) && !mobileNav.contains(event.target)) {
+                closeMenu();
+            }
+        });
+    </script>
+    {% endblock mainmenu %}
+    {% block content%}
+    {% endblock content%}
+
+    <div class="quick-action-menu" >
+        <a href="tel:+1234567890" class="quick-action-item" >
+            <img src="{% static 'softarinapp/images/Phone.png' %}" alt="Call" />
+        </a>
+        <a href="https://wa.me/1234567890" class="quick-action-item" target="_blank">
+            <img src="{% static 'softarinapp/images/WhatsApp.png' %}" alt="WhatsApp"/>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer_text">&copy; 2024 SoftArin. All rights reserved.</p>
+            
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

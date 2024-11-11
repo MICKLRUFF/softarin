@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-11 06:50+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+#: softarin/settings.py:125
+msgid "English"
+msgstr "English"
+
+#: softarin/settings.py:126
+msgid "Ukrainian"
+msgstr "Українська"
+
+#: softarin/settings.py:127
+msgid "Spanish"
+msgstr "Español"
+
+#: softarinapp/forms.py:20
+msgid "NAME"
+msgstr "ІМ'Я"
+
+#: softarinapp/forms.py:28
+msgid "PHONE"
+msgstr "НОМЕР ТЕЛЕФОНУ"
+
+#: softarinapp/forms.py:36
+msgid "E-MAIL"
+msgstr "ЕЛЕКТРОННА ПОШТА"
+
+#: softarinapp/templates/softarinapp/index.html:8
+msgid "Customized and stable IT solutions with AI"
+msgstr "Індивідуальні та стабільні ІТ-рішення з ШІ"
+
+#: softarinapp/templates/softarinapp/index.html:9
+msgid ""
+"Developing AI Chatbots, Mobile & Web Apps & World Class Software for "
+"Startups, SMBs & Enterprises"
+msgstr ""
+"Розробка чат-ботів з ШІ, мобільних і веб-додатків і програмного забезпечення світового класу для"
+"стартапів, молого бізнесу та підприємств"
+
+#: softarinapp/templates/softarinapp/index.html:10
+msgid "Contact Us"
+msgstr "Зв'язатись"
+
+#: softarinapp/templates/softarinapp/index.html:16 softarinapp/views.py:12
+msgid "Our Services"
+msgstr "Наші послуги"
+
+#: softarinapp/templates/softarinapp/index.html:40
+msgid "For Whom?"
+msgstr "Для кого"
+
+#: softarinapp/templates/softarinapp/index.html:41
+msgid "We work with everyone, but are most focused on cooperation with:"
+msgstr ""
+
+#: softarinapp/templates/softarinapp/index.html:71 softarinapp/views.py:14
+msgid "Stages of work"
+msgstr "Етапи роботи"
+
+#: softarinapp/templates/softarinapp/index.html:94
+msgid "About US"
+msgstr "Про нас"
+
+#: softarinapp/templates/softarinapp/index.html:99
+msgid ""
+"Our company is a reliable software vendor that successfully enters the "
+"European Union market and is actively developing its presence in Spain. We "
+"specialize in creating complex digital solutions that help businesses "
+"increase efficiency, reduce costs and improve interactions with customers. "
+"Our development approach is based on the principles of high versatility, "
+"innovation and adaptability to current technological trends.\n"
+"\n"
+"The team consists of qualified engineers, designers, analysts and project "
+"managers who have extensive knowledge of various programming fields and have "
+"significant knowledge in the development of corporate mobile applications, "
+"solution, web platforms and dark systems. We are introducing a new cycle of "
+"software development, which includes analysis of client needs, design, "
+"development, testing and support, with an emphasis on the individual "
+"benefits of the skin care provider.\n"
+"\n"
+"However, we can apply the adaptive approach to a variety of businesses - "
+"from small startups to large corporations, introducing solutions that are "
+"consistent with their goals and budget. Our projects are characterized by a "
+"high level of security, scale and integration with other systems. In "
+"addition, we promote advanced technologies, such as artificial intelligence, "
+"machine learning, data analysis and business process automation, to provide "
+"our clients with a competitive advantage in the market.\n"
+"\n"
+"In our work with clients, we pay special respect to long-term cooperation "
+"and ongoing partnerships, understanding that the success of our clients is "
+"our success. With this approach, we help businesses integrate new "
+"technologies into their activities and constantly leap forward in the "
+"digital era, perhaps to the current market."
+msgstr ""
+"Наша компанія є надійним постачальником програмного забезпечення, який успішно виходить на"
+"ринок Європейського Союзу та активно розвиває свою присутність в Іспанії. ми "
+"спеціалізуємося на створенні складних цифрових рішень, які допомагають бізнесу"
+"підвищити ефективність, знизити витрати і покращити взаємодію з клієнтами."
+"Наш підхід до розробки базується на принципах високої універсальності, "
+"інноваційності та адаптивності до сучасних технологічних тенденцій.\n"
+"\n"
+"Команда складається з кваліфікованих інженерів, дизайнерів, аналітиків і проектувальників "
+"менеджерів, які мають широкі знання з різних галузей програмування та мають "
+"значні знання в розробці корпоративних мобільних додатків, "
+"рішення, веб-платформи та темні системи. Ми вводимо новий цикл "
+"розробка програмного забезпечення, що включає аналіз потреб клієнтів, дизайн, "
+"розробка, тестування та підтримка, з акцентом на індивідуальності "
+"переваги постачальника догляду за шкірою.\n"
+"\n"
+"Однак ми можемо застосувати адаптивний підхід до різноманітних видів діяльності – "
+"від невеликих стартапів до великих корпорацій, впроваджуючи рішення, які є "
+"відповідно до їхніх цілей і бюджету. Наші проекти характеризуються a "
+"високий рівень безпеки, масштабності та інтеграції з іншими системами. в "
+"крім того, ми просуваємо передові технології, такі як штучний інтелект, "
+"машинного навчання, аналізу даних і автоматизації бізнес-процесів "
+"наші клієнти з конкурентною перевагою на ринку.\n"
+"\n"
+"У роботі з клієнтами ми приділяємо особливу увагу довгостроковій співпраці "
+"і постійне партнерство, розуміння того, що успіх наших клієнтів "
+"наш успіх. Завдяки такому підходу ми допомагаємо бізнесу інтегрувати нові "
+"технології в свою діяльність і постійно стрибають вперед у "
+"цифрової ери, можливо, до поточного ринку."
+
+
+#: softarinapp/templates/softarinapp/index.html:115
+msgid "Our Clients Feedbacks"
+msgstr "Відгуки наших клієнтів"
+
+#: softarinapp/templates/softarinapp/index.html:223
+msgid "Contact Form"
+msgstr "Форма зв'язку"
+
+#: softarinapp/templates/softarinapp/index.html:224
+msgid ""
+"Leave your contact information so that we can contact you as soon as possible"
+msgstr ""
+"Залиште свою контактну інформацію, щоб ми могли зв'язатися з вами якомога швидше"
+
+#: softarinapp/templates/softarinapp/index.html:236
+msgid "Send Request"
+msgstr "Надіслати заявку"
+
+#: softarinapp/views.py:13
+msgid "For whom?"
+msgstr "Для кого?"
+
+#: softarinapp/views.py:15
+msgid "About Us"
+msgstr "Про нас"
+
+#: softarinapp/views.py:16
+msgid "Contact"
+msgstr "Контакти"

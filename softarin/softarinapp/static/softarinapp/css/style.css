@@ -1,0 +1,1140 @@
+body, html {
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: rgb(248 251 255);
+    color: rgb(0, 0, 0);
+    transition: filter 0.3s ease; /* Плавний перехід для зміни теми */
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Загальні стилі для контейнера */
+.container {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.999) ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.09);
+    z-index: 1000;
+}
+.header-content__logo {
+    height: 50px;
+}
+.header {
+    margin-top: 25px;
+    margin: auto;
+    text-decoration: none;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 100px;
+    margin-left: 20px;
+}
+
+.nav_left a {
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+
+.header-content__last {
+    display: flex;
+    align-items: center;
+}
+
+.header-content__last a {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.nav_left a, .header-content__last a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.link {
+    font-size: 35px;
+    text-decoration: none;
+    margin-left: 20px;
+    color: #001646;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+    margin-left: 20px;
+    color: #002064;
+}
+
+.link:active {
+    transform: scale(0.9);
+    text-decoration: none;
+    margin-left: 20px;
+    color: #00287f;
+}
+
+
+.login_button {
+    font-size: 40px;
+    text-decoration: none;
+    margin-left: 20px;
+    color: #fffefe;
+}
+
+/* Мобільне меню */
+.mobile-menu-button {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: #000000;
+    position: absolute;
+    top: 20px;
+    z-index: 1001;
+}
+
+.mobile-nav {
+    border-radius: 7px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 85px; /* Адаптуйте відповідно до вашого дизайну */
+    left: auto;
+    right: 0;
+    transform: translateX(-50%);
+    width: 80%; /* Адаптуйте відповідно до вашого дизайну */
+    background-color: rgb(225 225 225);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1001;
+    text-align: right; /* Центрує текстові посилання */
+    min-width: 220px;
+    min-height: 320px;
+}
+
+.mobile-nav a {
+    margin: 10px 0;
+}
+
+.icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0s 0.4s; 
+    position: absolute; 
+}
+
+#hamburgerIcon {
+    opacity: 1;
+    transform: rotate(0deg);
+    visibility: visible;
+}
+
+#crossIcon {
+    opacity: 0;
+    transform: rotate(90deg);
+    visibility: hidden;
+}
+
+#hamburgerIcon.hide {
+    opacity: 0;
+    transform: rotate(-90deg);
+    visibility: hidden;
+    transition: transform 0.4s ease, opacity 0.4s ease; 
+}
+
+#crossIcon.show {
+    opacity: 1;
+    transform: rotate(0deg);
+    visibility: visible;
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0s 0s; 
+}
+
+.logo_and_lg {
+    display: flex;
+}
+
+.language-form {
+
+    top: 30px;
+    margin-left: 40px;
+    color: rgb(0, 0, 0);
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    padding: 0px 10px 0px 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 20px 15px;
+}
+
+* {
+
+.language-form option {
+    background: none;
+    color: rgb(41, 41, 41);
+    border: none;
+}
+
+.language-form:hover {
+    color: rgb(77, 77, 77);
+}
+
+.language-form:active {
+    color: rgb(0, 59, 73);
+}
+
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    left: -230px;
+    top: -5px;
+}
+
+
+.custom-select {
+    position: relative;
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+}
+
+.select-trigger {
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-bottom: 6px;
+    background-color: rgba(255, 95, 95, 0.135);
+    border-radius: 2px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    height: 25px;
+}
+
+.custom-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    border-radius: 2px;
+}
+
+.custom-option {
+    padding-top: 5px;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-option:hover {
+    background-color: rgba(0, 59, 73, 0.1);
+}
+
+.custom-option img {
+    margin-right: 10px;
+}
+
+.custom-select.open .custom-options {
+    display: block;
+}
+
+
+.video-background {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 70px;
+    border-radius: 11px;
+    background: linear-gradient(315deg, #f0f0f0, #0cffff);
+    box-shadow: -5px -5px 10px #d3d3d3, 5px 5px 10px #ededed;
+}
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    
+    
+}
+
+
+
+.content-overlay {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+    text-align: center;
+}
+
+
+.footer-content {
+    width: 100%;
+    height: auto;
+    /* background: linear-gradient(to top, #121212, #43434300); */
+    bottom: 0;
+    left: 0;
+    /* padding: 100px; */
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.09);
+    z-index: 1000;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.footer_text {
+    color: #000000;
+}
+
+.body-content {
+    /* width: 1800px;
+    height: 800px; */
+    margin: 2px;
+    background-color: #e8feff00;
+    position: relative; /* Можливо, використання relative буде корисніше */
+    top: 10px; /* Встановлює конкретну відстань від верхнього краю */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.09);
+    z-index: 10; /* Переконайтеся, що z-index правильний */
+    /*backdrop-filter: blur(5px); /* Додає розмиття до фону */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.quick-action-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+
+.quick-action-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.quick-action-item:hover {
+    transform: scale(1.1);
+}
+
+.quick-action-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.foto_content {
+    margin: 10px;
+    /* width: 500px; */
+    height: 600px;
+    background-color: #82c9e95d;
+    padding: 20px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.projects_foto {
+    max-width: 500px;
+    height: 400px;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 0;
+
+}
+
+.title_type1 {
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.title_type2 {
+    font-size: 15px;
+    margin-top: 7px;
+    bottom: 2px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* максимальна кількість рядків */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.container_gallery {
+    max-width: 1360px;
+    border-radius: 7px;
+
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    
+}
+
+.container_gallery .gallery {
+
+    width: 100%;
+    display: flex;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    
+}
+
+.container_gallery .gallery img{
+
+    border-radius: 7px;
+    
+}
+
+.container_gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.controls {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+    background: radial-gradient(#39393900, #ffffff00); /* Градієнт з прозорістю */
+
+}
+
+
+.RightBotton, .LeftBotton {
+  
+    width: 70px;
+    height: 80px;
+    cursor: pointer;
+    margin: 10px;
+    transform: scale(0.4);
+
+}
+
+.RightBotton:hover {
+    transform: scale(0.6);
+}
+
+.LeftBotton:hover {
+    transform: scale(0.6);
+}
+
+.RightBotton:active {
+    transform: scale(0.5);
+}
+
+.LeftBotton:active {
+    transform: scale(0.5);
+}
+
+.body-content_2 {
+    background-color: rgb(248 251 255);
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+    
+}
+
+.h1_title {
+    top: 10px;
+    margin: 0; /* Забирає зовнішні відступи */
+    padding: 0; /* Забирає внутрішні відступи, якщо вони є */
+}
+
+.proposition {
+    max-width: 1300px;
+    display: flex;
+    background-color: #ffffff5d;
+    align-items: center;
+    border-radius: 7px;
+    gap: 20px;
+    color: #000000;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    background: #e0e0e0;
+    box-shadow: -6px -7px 20px 0px #b8b8b8, 9px 7px 20px #ffffff;
+}
+
+.proposition2 {
+    width: 350px;
+    display: flex;
+    background-color: #ffffff5d;
+    align-items: center;
+    border-radius: 7px;
+    gap: 20px;
+    color: #000000;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    background: #e0e0e0;
+    box-shadow: -6px -7px 20px 0px #b8b8b8, 9px 7px 20px #ffffff;
+    flex-direction: column;}
+
+.text_block {
+    white-space: pre-wrap;
+    text-align: justify;
+    color: #00212e;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+
+.container_gallery_2 {
+    width: 1800px;
+    height: 300px;
+    background: radial-gradient(#3939397d, #ffffff00); /* Градієнт з прозорістю */
+    display: flex;
+    overflow-x: scroll;
+    
+}
+
+.container_gallery_2 .gallery {
+
+    width: 100%;
+    display: flex;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    
+}
+
+.container_gallery_2 .gallery img{
+    width: 100px; /* Ширина зображення */
+    height: 100px; /* Висота зображення */
+    border-radius: 50%; /* Робить зображення круглим */
+    object-fit: cover; /* Забезпечує збереження пропорцій зображення */
+    background-color: white;
+    
+}
+
+.container_gallery_2::-webkit-scrollbar {
+    display: none;
+}
+
+.controls {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+    background: radial-gradient(#39393900, #ffffff00); /* Градієнт з прозорістю */
+
+}
+
+.controls #RightBotton2, .controls #LeftBotton2 {
+
+    width: 70px;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.text_block_2 {
+    text-align: justify; 
+    font-size: 25px;
+    color: rgb(0, 19, 37);
+    text-decoration: none;
+
+    line-height: 1.5;
+    text-align: center;
+
+    display: -webkit-box;
+    display: box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    overflow: hidden;
+    
+}
+
+.feed-back_form {
+    border-radius: 7px;
+    max-width: 700px;
+    height: 500px;
+    display:grid;
+    position: relative; /* Можливо, використання relative буде корисніше */
+    top: 10px; /* Встановлює конкретну відстань від верхнього краю */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.feed-back-feld_in {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px;
+    border: none;
+    -webkit-border-radius: 3px;
+    border-radius: 7px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: rgba(201,201,201,0.27);
+    width: 95%;
+    grid-gap: 20px;
+
+
+  
+  }
+
+
+  .request_button {
+    display: inline-block;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    color: rgb(0, 21, 62);
+    text-align: center;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: 5px 14px 20px #bebebe, inset -12px -12px 24px #ffffff;
+}
+  
+  .request_button:hover {
+    display: inline-block;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px ;
+    border: none;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    color: rgb(0, 7, 72);
+    text-align: center;
+    letter-spacing: 3px;
+
+    border-radius: 7px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+
+  }
+
+  
+  .request_button:active {
+    display: inline-block;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px ;
+    border: none;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    color: rgb(0, 7, 92);
+    text-align: center;
+    letter-spacing: 3px;
+    border-radius: 7px;
+    background: #e0e0e0;
+    box-shadow: 5px 14px 20px #ffffff, inset -12px -12px 24px #808080;
+
+  }
+
+  .request_button2 {
+    display: inline-block;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px ;
+    border: none;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    color: rgb(0, 21, 62);
+    text-align: center;
+    letter-spacing: 3px;
+    border-radius: 7px;
+    background: #e0e0e0;
+    box-shadow: 5px 14px 20px #bebebe, inset -12px -12px 24px #ffffff;
+
+  }
+
+  
+  .request_button2:hover {
+    transform: scale(1.05);
+    display: inline-block;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px ;
+    border: none;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    color: rgb(0, 7, 72);
+    text-align: center;
+    letter-spacing: 3px;
+    border-radius: 7px;
+
+  }
+
+  
+  .request_button2:active {
+    display: inline-block;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px ;
+    border: none;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    color: rgb(0, 7, 92);
+    text-align: center;
+    letter-spacing: 3px;
+    border-radius: 7px;
+    background: #e0e0e0;
+    box-shadow: 5px 14px 20px #ffffff, inset -12px -12px 24px #808080;
+
+  }
+
+
+  .container_gallery .gallery {
+
+    width: auto;
+    display: flex;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    
+}
+
+.container_gallery  img{
+
+    border-radius: 7px;
+    object-fit: cover;
+    margin: 16.5px;
+    height: 300px;
+    width: 400px;
+    transition: transform 0.5s ease;
+    
+}
+
+.container_gallery a{
+
+text-decoration: none;
+    
+}
+
+.container_gallery img:hover {
+    transform: scale(1.1); /* Збільшення при наведенні */
+    z-index: 10; /* Щоб зображення було поверх інших */
+}
+
+.container_gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.news_gallery {
+    display: flex;
+    height: 500px;
+    width: 400px;
+    margin: 16.5px;
+    border-radius: 7px;
+    transition: transform 0.5s ease;
+    flex-direction: column;
+    background: linear-gradient(145deg, #c8f2ff, #cacaca);
+    box-shadow: 10px 12px 16px 10px #bebebead, -15px -14px 12px 11px #ffffff;
+}
+
+
+.news_gallery:hover {
+    
+    transform: scale(1.05); /* Збільшення при наведенні */
+    z-index: 100; /* Щоб зображення було поверх інших */
+}
+
+
+.news_gallery img{
+    border-radius: 7px;
+    object-fit: cover;
+    margin: 0px;
+    max-height: 300px;
+    max-width: 400px;
+    transition: transform 0.5s ease;
+}
+
+.news_gallery:hover img{
+    transform: scale(1.0); /* Збільшення при наведенні */
+    z-index: 100; /* Щоб зображення було поверх інших */
+}
+
+.news_gallery h1{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    }
+
+.news_gallery a{
+    color: #002a4a;
+    text-decoration: none;
+    }
+
+.news_gallery p{
+    font-size: 25px;
+    color: rgb(0, 19, 37);
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-align: center;
+    white-space: pre-wrap;
+    display: -webkit-box;             /* WebKit browsers fallback */
+    display: box;                     /* Future compatibility */
+    -webkit-line-clamp: 3;            /* Limit to 3 lines (WebKit) */
+    line-clamp: 3;                    /* Future property (Standard) */
+    -webkit-box-orient: vertical;     /* Required for WebKit */
+    box-orient: vertical;             /* Future property (Standard) */
+    overflow: hidden;                 /* Hide excess text */
+    text-overflow: ellipsis;          /* Show '...' when truncated */
+    }
+
+@media (max-width: 1280px) {
+    .body-content {
+        margin: 2px;
+        background-color: #e8feff00;
+        position: relative;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 20px;
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.09);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .container_gallery {
+        max-width: 925px;
+        border-radius: 7px;
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+}
+/* Медіа-запити для мобільних пристроїв */
+@media (max-width: 768px) {
+
+    #background-video {
+        /* Ви можете налаштувати інші властивості для менших екранів */
+        height: 100%; /* Переконайтеся, що висота правильно налаштована */
+    }
+    .proposition2 {
+        width: 300px;
+        display: flex;
+        background-color: #ffffff5d;
+        align-items: center;
+        border-radius: 7px;
+        gap: 20px;
+        color: #000000;
+        margin: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        justify-content: center;
+        background: #e0e0e0;
+        box-shadow: -6px -7px 20px 0px #b8b8b8, 9px 7px 20px #ffffff;
+        flex-direction: column;}
+
+    .header-content {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .nav_left, .header-content__last {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+        left: 10px;
+    }
+    .header-content__logo {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        }
+    
+    .language-form-option {
+        position: absolute;
+        right: 10px;
+        top: 50px;
+    }
+
+    .custom-select-wrapper {
+        top: 50%;
+        left: 28%;
+    }
+    .body-content {
+        /* width: 1800px; */
+        /* height: 800px; */
+        background-color: rgb(248 251 255);
+        position: relative;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 20px;
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.09);
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .proposition {
+        width: 320px;
+        display: flex;
+        background-color: #ffffff;
+        align-items: center;
+        border-radius: 7px;
+        gap: 20px;
+        color: #003047;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        justify-content: center;
+        flex-direction: column;
+        background: #e0e0e0;
+        box-shadow: -6px -7px 20px 0px #b8b8b8, 9px 7px 20px #ffffff;
+        flex-direction: column;
+    }
+
+    .news_gallery {
+        display: flex;
+        height: 500px;
+        width: 350px;
+        margin: 16.5px;
+        border-radius: 7px;
+        transition: transform 0.5s ease;
+        flex-direction: column;
+        background: linear-gradient(145deg, #c8f2ff, #cacaca);
+        box-shadow: 10px 12px 16px 10px #bebebead, -15px -14px 12px 11px #ffffff;
+    }
+    
+    
+    .news_gallery:hover {
+        
+        transform: scale(1.05); /* Збільшення при наведенні */
+        z-index: 100; /* Щоб зображення було поверх інших */
+    }
+    
+    
+    .news_gallery img{
+        border-radius: 7px;
+        object-fit: cover;
+        margin: 0px;
+        max-height: 300px;
+        max-width: 400px;
+        transition: transform 0.5s ease;
+    }
+    
+    .news_gallery:hover img{
+        transform: scale(1.0); /* Збільшення при наведенні */
+        z-index: 100; /* Щоб зображення було поверх інших */
+    }
+    
+    .news_gallery h1{
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        }
+    
+    .news_gallery a{
+        color: #002a4a;
+        text-decoration: none;
+        }
+    
+    .news_gallery p{
+        font-size: 25px;
+        color: rgb(0, 19, 37);
+        text-decoration: none;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        text-align: center;
+        white-space: pre-wrap;
+        display: -webkit-box;             /* WebKit browsers fallback */
+        display: box;                     /* Future compatibility */
+        -webkit-line-clamp: 3;            /* Limit to 3 lines (WebKit) */
+        line-clamp: 3;                    /* Future property (Standard) */
+        -webkit-box-orient: vertical;     /* Required for WebKit */
+        box-orient: vertical;             /* Future property (Standard) */
+        overflow: hidden;                 /* Hide excess text */
+        text-overflow: ellipsis;          /* Show '...' when truncated */
+        }
+
+        .video-background {
+
+            font-size: 15px;
+        }
+
+        .RightBotton, .LeftBotton {
+            width: 0px;
+            height: 0px;
+            cursor: pointer;
+            margin: 10px;
+            transform: scale(0);
+        }
+
+    .container_gallery img {
+    border-radius: 7px;
+    object-fit: cover;
+
+    height: 230px;
+    width: 300px;
+    transition: transform 0.5s ease;
+}
+.feed-back_form {
+
+    margin-right: 40px;
+
+}
+
+p {
+    font-size: 20px;
+}
+
+.title_type1 img{
+width: 100px;
+height: 100px;
+}
+
+.title_type1 h2{
+    margin: 0;
+    font-size: 26px;
+    }
+
+.container_gallery .gallery {
+
+    width: auto;
+    display: flex;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+}
+}
